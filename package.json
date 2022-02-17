@@ -1,0 +1,23 @@
+{
+  "name": "csnyder-readme-generator",
+  "version": "1.0.0",
+  "description": "I WANT a README generator  \r SO THAT I can quickly create a professional README for a new project",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/csnyder332/Csnyder-README-Generator.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/csnyder332/Csnyder-README-Generator/issues"
+  },
+  "homepage": "https://github.com/csnyder332/Csnyder-README-Generator#readme",
+  "dependencies": {
+    "inquirer": "^8.2.0"
+  }
+}
