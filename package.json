@@ -18,6 +18,9 @@
   },
   "homepage": "https://github.com/csnyder332/Csnyder-README-Generator#readme",
   "dependencies": {
-    "inquirer": "^8.2.0"
+    "axios": "^0.26.0",
+    "fs": "^0.0.1-security",
+    "inquirer": "^8.2.0",
+    "utils": "^0.3.1"
   }
 }
