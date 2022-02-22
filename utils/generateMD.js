@@ -1,39 +1,48 @@
 // Create a function that returns a license badge based on which license is passed in
 
-
 const licenseArr = ['AUR', 'Github', 'NPM',]
 
-function renderLicenseBadge(lice) {
-  if (lice===licenseArr[0]) {
+function renderLicenseBadge(license) {
+  if (license===licenseArr[0]) {
     return '![AURlicense](https://img.shields.io/aur/license/android-studio)'
-  } else if (lice===licenseArr[1]) {
+  } else if (license===licenseArr[1]) {
     return '![GitHub](https://img.shields.io/github/license/${questions.username}/repo-name)'
-  } else if (lice===licenseArr[2]) {
+  } else if (license===licenseArr[2]) {
     return '![NPM](https://img.shields.io/npm/l/inquirer)'
   } else {
     return ''
   }
 }
-
-
-
-
-
+// function renderLicenseBadge(questions) {
+//   let lice = questions; 
+//   let yourLicense = ''
+//   if(lice === 'AUR') {
+//     yourLicense = '![AURlicense](https://img.shields.io/aur/license/android-studio)'
+//   } else if (lice === 'Github') {
+//     yourLicense = '![GitHub](https://img.shields.io/github/license/${questions.username}/repo-name)'
+//   } else if (lice === 'NPM') {
+//     yourLicense = '![NPM](https://img.shields.io/npm/l/inquirer)'
+//   } else {
+//     return ''
+//   }
+//   renderLicenseBadge();
+//   return yourLicense;
+// };
 
 
 // // TODO: Create a function that returns the license link
 // // If there is no license, return an empty string
-function renderLicenseLink(license) {
-  if (license===licenseArr[0]){
-    return `[${licenseArr[0]}](https://wiki.archlinux.org/title/Arch_User_Repository)`
-  } else if (license===licenseArr[1]){
-    return `[${licenseArr[1]}](https://github.com/)`
-  } else if (license===licenseArr[2]){
-    return `[${licenseArr[2]}](https://www.npmjs.com/)`
-  } else {
-    return ''
-  }
-}
+// function renderLicenseLink(license) {
+//   if (license===licenseArr[0]){
+//     return `[${licenseArr[0]}](https://wiki.archlinux.org/title/Arch_User_Repository)`
+//   } else if (license===licenseArr[1]){
+//     return `[${licenseArr[1]}](https://github.com/)`
+//   } else if (license===licenseArr[2]){
+//     return `[${licenseArr[2]}](https://www.npmjs.com/)`
+//   } else {
+//     return ''
+//   }
+// }
 // // TODO: Create a function that returns the license section of README
 // // If there is no license, return an empty string
 // function renderLicenseSection(license) {}
@@ -44,8 +53,8 @@ function generateMarkdown(questions) {
   return `# ${questions.title}
 
   ## Badges
-  ${renderLicenseBadge(questions.lice)}
-
+  ![badge](https://img.shields.io/badge/license-${questions.license}-yellow)<br />
+ 
   ## Description
   ${questions.description}
 
@@ -57,7 +66,7 @@ function generateMarkdown(questions) {
   - [Contributers](#contributing)
   - [Features](#features)
   - [Tests](#tests)
-  - [Questions?](#Questions)
+  - [questions?](#Questions)
   - [License](#license)
   
   ## Installation
@@ -81,8 +90,8 @@ function generateMarkdown(questions) {
   Github: [${questions.username}](https://github.com/${questions.username})
   email: ${questions.email}
 
-  ## Licenses
-  ${renderLicenseLink(questions.lice)}
+  ## License
+  
   
   `;
 }
