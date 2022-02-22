@@ -32,12 +32,6 @@ function questions() {
             name: 'usage',
         },
         {
-            type: 'checkbox',
-            message: 'Choose applicable licenses?',
-            name: 'license',
-            choices: ['Apache', 'MIT', 'Mozilla', 'NPM', 'Github', 'Node',]
-        },
-        {
             type: 'input',
             message: 'List users contributing to this project.',
             name: 'contributing',
@@ -61,6 +55,12 @@ function questions() {
             type: 'input',
             message: 'Enter email address',
             name: 'email',
+        },
+        {
+            type: 'checkbox',
+            message: 'Choose applicable licenses?',
+            name: 'license',
+            choices: ['AUR', 'Github', 'NPM']
         },
     ]
     )
