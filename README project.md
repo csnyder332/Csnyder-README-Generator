@@ -1,10 +1,10 @@
-# sdfsdfsd
-
+# README Generator
+  
   ## Badges
   ![badge](https://img.shields.io/badge/license-Github,NPM-yellow)<br />
-  
+ 
   ## Description
-  sdf
+  Thsi project is creating a README file using node and specifically inquirer. Questions answered via the terminal will be generated in a markdown format.
 
   ## Table of Contents
 
@@ -18,29 +18,29 @@
   - [License](#license)
   
   ## Installation
-  dfs
+  Install npm. Install inquirer.
 
   ## Usage
-  df
+  Open node, the file, and follow prompts.
 
   ## Contribute
   [Contributor Covenant](https://www.contributor-covenant.org/)
-  sdf
+  Chris Snyder
 
 
   ## Features
-  sdfs
+  no
 
   ## Tests
-  dfsd
+  no
 
   ## Questions?
   
-  Github: [sdf](https://github.com/sdf)
-  email: sfd
+  Github: [csnyder332](https://github.com/csnyder332)
+  email: csnyder332@gmail.com
 
   ## License
-  ![badge](https://img.shields.io/badge/license-Github,NPM-brightgreen)
+  ![NPM](https://img.shields.io/npm/l/inquirer)
   
   
   

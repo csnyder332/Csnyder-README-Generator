@@ -5,10 +5,9 @@ function generateMarkdown(questions) {
   //sections of README
   return `# ${questions.title}
   
-  
   ## Badges
   ![badge](https://img.shields.io/badge/license-${questions.license}-yellow)<br />
-  ${renderLicenseBadge(questions.license)}
+ 
   ## Description
   ${questions.description}
 
