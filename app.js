@@ -67,8 +67,8 @@ function questions() {
 };
 
 //function to write README file
-function writeToFile(file, data) {
-    fs.appendFile(`${file}.md`, data,
+function writeToFile(file, questions) {
+    fs.appendFile(`${file}.md`, questions,
         (err) => err ? console.error(err) : console.log(`${file}.md has been created!`))
 }
 

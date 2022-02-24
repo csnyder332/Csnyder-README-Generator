@@ -4,16 +4,16 @@ const licenseArr = ['AUR', 'Github', 'NPM',]
 
 function renderLicenseBadge(license) {
   if (license===licenseArr[0]) {
-    return '![AURlicense](https://img.shields.io/aur/license/android-studio)'
+    return '(https://img.shields.io/aur/license/android-studio)'
   } else if (license===licenseArr[1]) {
-    return '![GitHub](https://img.shields.io/github/license/${questions.username}/repo-name)'
+    return '(https://img.shields.io/github/license/${questions.username}/repo-name)'
   } else if (license===licenseArr[2]) {
-    return '![NPM](https://img.shields.io/npm/l/inquirer)'
+    return '(https://img.shields.io/npm/l/inquirer)'
   } else {
     return ''
   }
 }
-// function renderLicenseBadge(questions) {
+// // function renderLicenseBadge(questions) {
 //   let lice = questions; 
 //   let yourLicense = ''
 //   if(lice === 'AUR') {
@@ -30,19 +30,18 @@ function renderLicenseBadge(license) {
 // };
 
 
-// // TODO: Create a function that returns the license link
-// // If there is no license, return an empty string
-// function renderLicenseLink(license) {
-//   if (license===licenseArr[0]){
-//     return `[${licenseArr[0]}](https://wiki.archlinux.org/title/Arch_User_Repository)`
-//   } else if (license===licenseArr[1]){
-//     return `[${licenseArr[1]}](https://github.com/)`
-//   } else if (license===licenseArr[2]){
-//     return `[${licenseArr[2]}](https://www.npmjs.com/)`
-//   } else {
-//     return ''
-//   }
-// }
+//function for license links
+function renderLicenseLink(license) {
+  if (license===licenseArr[0]){
+    return `[${licenseArr[0]}](https://wiki.archlinux.org/title/Arch_User_Repository)`
+  } else if (license===licenseArr[1]){
+    return `[${licenseArr[1]}](https://github.com/)`
+  } else if (license===licenseArr[2]){
+    return `[${licenseArr[2]}](https://www.npmjs.com/)`
+  } else {
+    return ''
+  }
+}
 // // TODO: Create a function that returns the license section of README
 // // If there is no license, return an empty string
 // function renderLicenseSection(license) {}
@@ -54,7 +53,7 @@ function generateMarkdown(questions) {
 
   ## Badges
   ![badge](https://img.shields.io/badge/license-${questions.license}-yellow)<br />
- 
+  ${renderLicenseBadge(questions.license)}
   ## Description
   ${questions.description}
 
@@ -63,7 +62,7 @@ function generateMarkdown(questions) {
   - [Description](#description)
   - [Installation](#installation)
   - [Usage](#usage)
-  - [Contributers](#contributing)
+  - [Contribute](#contribute)
   - [Features](#features)
   - [Tests](#tests)
   - [questions?](#Questions)
@@ -75,7 +74,8 @@ function generateMarkdown(questions) {
   ## Usage
   ${questions.usage}
 
-  ## Contributors
+  ## Contribute
+  [Contributor Covenant](https://www.contributor-covenant.org/)
   ${questions.contributing}
 
 
@@ -91,6 +91,7 @@ function generateMarkdown(questions) {
   email: ${questions.email}
 
   ## License
+  ![NPM](https://img.shields.io/npm/l/inquirer)
   
   
   `;
